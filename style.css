@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html{
+    scroll-behavior:smooth;
+}
+
+*{
+    color : white;
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: "ubuntu",sans-serif;
+}
+
+body{
+    font-size: 15px;
+}
+
+header {
+    width: 100%;
+    height : 100vh;
+    background-color: #2b2f4b;
+    color : #fff;
+}
+
+header #particles{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
+}
+
+header .info_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 15px;
+    height : 100vh;
+}
+
+header .info_text h1{
+    font-size: 100px;
+    font-weight: 500;
+}
+
+header .info_text h3{
+    font-size: 25px;
+}
+
+header .info_text .scroll{
+    position : absolute;
+    bottom : 20%;
+    color : white;
+    left : 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+
+header .info_text .scroll:hover{
+    opacity: 0.7;
+}
+
+header .info_text .scroll::before{
+    position : absolute;
+    top  : -15px;
+    left : -12px;
+    z-index: -1;
+    content :'';
+    width : 44px;
+    height : 44px;
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.1);
+    border-radius: 100%;
+    animation : pulse 3s infinite;
+}
+
+@keyframes pulse{
+
+    0%, 100%{
+        opacity : 0;
+    }
+
+    15%,45%{
+        opacity: 1;
+    }
+
+    60%{
+        box-shadow : 0 0 0 30px rgba(255,255,255,0.1);
+        opacity: 0;
+    }
+
+}
+
+#about , #features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b2f4b;
+    padding : 40px;
+}
+
+#about .header , #features .header{
+    width : 100%;
+    display :flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about .header h1, #features .header h1{
+
+    text-align: center;
+    color :#fff;
+    text-transform: uppercase;
+}
+
+#about .header a, #features .header a{
+
+    text-align: center;
+    color :#fff;
+    text-decoration: none;
+    font-size: 20px;
+    border : 2px solid transparent;
+    padding : 10px 50px ;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#about .header a:hover, #features .header a:hover{
+
+    border-color : #fff;
+    box-shadow: none;
+}
+
+#about .card{
+    width : 60%;
+}
+
+#about .card,#features .card{
+    padding : 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    display :flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap : 30px;
+    border-radius: 20px;
+    border : 1px solid transparent;
+    transition : all 0.3s ease;
+}
+
+#about .card:hover,#features .card:hover{
+
+    border-color: white;
+    box-shadow: 0 0 20px rgb(255, 52, 52);
+
+}
+
+#about .card img{
+    width : 60%;
+    border-radius: 20px;
+    border : 2px solid white;
+    box-shadow: 0 0 20px rgb(49, 183, 255);
+}
+
+
+#about .card .info{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+
+}
+
+#about .card .info h1 , #features .card .info h1{
+
+    margin-bottom: 20px;
+    color : #fff;
+    font-size: 30px;
+
+
+}
+
+#about .card .info p , #features .card .info p{
+
+    color : #ccc;
+    font-size: 15px;
+    line-height: 20px;
+
+}
+
+#features .feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap : 30px;
+}
+
+#features .feature-cards .card{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex : 1;
+    min-width: 350px;
+}
+
+
+#features .feature-cards .card .info h1{
+    text-align: center;
+
+}
+
+
+#features .feature-cards .card .info p{
+    font-size: 15px;
+
+}
+
+.scroll-top{
+    display: none;
+    position :fixed;
+    bottom : 20px;
+    color : white;
+    background-color: #2b2f4b;
+    right : 20px;
+    border : 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    padding: 18px 18px ;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover{
+   
+    border-color: #fff;
+    box-shadow: 0 0 20px rgb(255, 52, 52);
+}
+
+
+
+
+
+@media screen and (max-width : 580px){
+    .feature-cards{
+        width : 100%;
+    }
+
+    #about .card{
+        width : 100%;
+    }
+}
+
+
+
+
